@@ -5,6 +5,8 @@ position: 3
 
 # Diagramas para Desarrollo Web y APIs
 
+
+
 Ejemplos específicos de diagramas Mermaid para documentar APIs REST, arquitecturas web y flujos de autenticación.
 
 ## API REST - Endpoints y Recursos
