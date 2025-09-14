@@ -44,6 +44,19 @@ npm run preview:github
 3. En **Source**, selecciona **GitHub Actions**
 4. El workflow se ejecutará automáticamente en el próximo push
 
+### Paso 3: Configurar Permisos
+
+1. Ve a **Settings** > **Actions** > **General**
+2. En "Workflow permissions", selecciona "Read and write permissions"
+3. Marca "Allow GitHub Actions to create and approve pull requests"
+4. Guarda los cambios
+
+### Paso 4: Verificar Environment
+
+1. Ve a **Settings** > **Environments**
+2. Debería aparecer automáticamente un environment llamado "github-pages"
+3. Si no existe, créalo manualmente
+
 ### Paso 3: Estructura de documentos
 
 Asegúrate de que tus documentos estén en la carpeta `docs/` con la siguiente estructura:
