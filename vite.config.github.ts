@@ -38,7 +38,7 @@ export default defineConfig({
   root: 'src',
   publicDir: '../public',
   // Configuración específica para GitHub Pages
-  base: '/docsv1/', // Cambia esto por el nombre de tu repositorio
+  base: '/docsv5/', // Cambia esto por el nombre de tu repositorio
   define: {
     global: 'globalThis',
     // Inyectar configuración de GitHub Pages
