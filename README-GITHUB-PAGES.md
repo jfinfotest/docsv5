@@ -41,8 +41,10 @@ npm run preview:github
 
 1. Ve a la configuración de tu repositorio en GitHub
 2. Navega a **Settings** > **Pages**
-3. En **Source**, selecciona **GitHub Actions**
-4. El workflow se ejecutará automáticamente en el próximo push
+3. En **Source**, selecciona **"GitHub Actions"**
+4. Si no aparece la opción, asegúrate de que el repositorio sea público o tengas GitHub Pro/Enterprise
+5. El workflow intentará habilitar Pages automáticamente, pero es recomendable hacerlo manualmente primero
+6. El workflow se ejecutará automáticamente en el próximo push
 
 ### Paso 3: Configurar Permisos
 
@@ -108,6 +110,15 @@ npm run update-file-manifest
 ```
 
 ## Solución de problemas
+
+### Error: "Get Pages site failed" o "Not Found"
+**Causa**: GitHub Pages no está habilitado en el repositorio
+
+**Solución**:
+1. Ve a **Settings** > **Pages** en GitHub
+2. En "Source", selecciona **"GitHub Actions"**
+3. Si el repositorio es privado, necesitas GitHub Pro/Enterprise
+4. Espera unos minutos y vuelve a ejecutar el workflow
 
 ### El sitio no carga correctamente
 1. Verifica que la `base` URL en `vite.config.github.ts` coincida con el nombre de tu repositorio
