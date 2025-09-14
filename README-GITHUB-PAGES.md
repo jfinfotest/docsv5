@@ -111,14 +111,23 @@ npm run update-file-manifest
 
 ## Solución de problemas
 
-### Error: "Get Pages site failed" o "Not Found"
-**Causa**: GitHub Pages no está habilitado en el repositorio
+### Error: "Get Pages site failed" o "Resource not accessible by integration"
+**Causa**: GitHub Pages no está habilitado o el token no tiene permisos suficientes
 
 **Solución**:
-1. Ve a **Settings** > **Pages** en GitHub
-2. En "Source", selecciona **"GitHub Actions"**
-3. Si el repositorio es privado, necesitas GitHub Pro/Enterprise
-4. Espera unos minutos y vuelve a ejecutar el workflow
+1. **Habilitar GitHub Pages manualmente**:
+   - Ve a **Settings** > **Pages** en GitHub
+   - En "Source", selecciona **"GitHub Actions"**
+   - Si el repositorio es privado, necesitas GitHub Pro/Enterprise
+
+2. **Verificar permisos del repositorio**:
+   - Ve a **Settings** > **Actions** > **General**
+   - En "Workflow permissions", selecciona **"Read and write permissions"**
+   - Marca **"Allow GitHub Actions to create and approve pull requests"**
+
+3. **Esperar y reintentar**:
+   - Espera unos minutos después de habilitar Pages
+   - Vuelve a ejecutar el workflow desde la pestaña **Actions**
 
 ### El sitio no carga correctamente
 1. Verifica que la `base` URL en `vite.config.github.ts` coincida con el nombre de tu repositorio
