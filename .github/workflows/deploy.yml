@@ -48,6 +48,9 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v4
       if: github.ref == 'refs/heads/main'
+      with:
+        # Habilitar GitHub Pages automáticamente
+        enablement: true
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
