@@ -43,8 +43,8 @@ export default defineConfig({
     global: 'globalThis',
     // Inyectar configuración de GitHub Pages
     __GITHUB_PAGES_CONFIG__: JSON.stringify({
-      basePath: '/docsv1',
-      docsPath: '/docsv1/docs',
+      basePath: '/docsv5',
+      docsPath: '/docsv5/docs',
       isGitHubPages: true
     })
   },
